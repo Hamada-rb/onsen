@@ -26,7 +26,9 @@ class MyApp < Ovto::App
     def render
         o 'div' do
             o Header
-            o 'h1', 'Hamada Onsen Map'
+            o 'div.container' do
+                o 'h1', 'Hamada Onsen Map'
+            end
         end
     end
   end
