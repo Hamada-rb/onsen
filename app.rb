@@ -57,7 +57,7 @@ class MyApp < Ovto::App
         o 'div' do
             o Header
             o 'div.container' do
-                o 'h1', 'Hamada Onsen Map'
+                o 'h1.center-align', 'Hamada Onsen Map'
                 o Onsens, onsens: state.onsen
             end
         end
