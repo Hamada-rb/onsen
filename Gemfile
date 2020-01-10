@@ -11,3 +11,6 @@ gem "ovto"
 
 # Using Rake
 gem 'rake'
+
+# Usinf ifchanged
+gem 'ifchanged'
