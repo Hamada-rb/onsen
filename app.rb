@@ -7,8 +7,12 @@ class MyApp < Ovto::App
       {
         name: "旭温泉あさひ荘",
         address: "〒697-0427 島根県浜田市旭町木田９５４−３",
-        about: "【営業時間】9時～20時／【定休日】毎週水曜日【その他ご案内】当施設は日帰りのみです※宿泊はできません",
         url: "http://asahionsen.net/selected/"   
+      },
+      {
+        name: "美又温泉会館",
+        address: "697-0301 島根県浜田市金城町追原11番乙地",
+        url: "http://www.kankou-hamada.org/modules/guide/index.php?action=SpotView&spot_id=1043"
       }
     ]
   end
@@ -40,7 +44,6 @@ class MyApp < Ovto::App
               o 'div.card-content.white-text' do
                 o 'span.card-title', onsen["name"]
                 o 'p', onsen["address"]
-                o 'p', onsen["about"]
                 o 'div.card-action' do
                   o 'a', { href: onsen["url"] }, "Webサイトへ"
                 end
