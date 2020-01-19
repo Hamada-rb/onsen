@@ -16,6 +16,12 @@ class MyApp < Ovto::App
         address: "697-0301 島根県浜田市金城町追原11番乙地",
         url: "http://www.kankou-hamada.org/modules/guide/index.php?action=SpotView&spot_id=1043",
         showable: true
+      },
+      {
+        name: "リフレパークきんたの里",
+        address: "697-0123 島根県浜田市金城町七条イ980番1",
+        url: "http://www.kankou-hamada.org/modules/guide/index.php?action=SpotView&spot_id=1157",
+        showable: true
       }
     ]
   end
