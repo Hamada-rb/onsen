@@ -4,29 +4,42 @@ require 'json'
 class MyApp < Ovto::App
   class State < Ovto::State
     item :word, default: ""
-    item :onsen, default: [
-      {
-        name: "旭温泉あさひ荘",
-        address: "〒697-0427 島根県浜田市旭町木田９５４−３",
-        url: "http://asahionsen.net/selected/",
-        showable: true   
-      },
-      {
-        name: "美又温泉会館",
-        address: "697-0301 島根県浜田市金城町追原11番乙地",
-        url: "http://www.kankou-hamada.org/modules/guide/index.php?action=SpotView&spot_id=1043",
-        showable: true
-      },
-      {
-        name: "リフレパークきんたの里",
-        address: "697-0123 島根県浜田市金城町七条イ980番1",
-        url: "http://www.kankou-hamada.org/modules/guide/index.php?action=SpotView&spot_id=1157",
-        showable: true
-      }
-    ]
+    item :onsen, default: []
   end
 
   class Actions < Ovto::Actions
+    def set_onsen
+
+      onsen = [
+        {
+          name: "旭温泉あさひ荘",
+          address: "〒697-0427 島根県浜田市旭町木田９５４−３",
+          url: "http://asahionsen.net/selected/",
+          showable: true   
+        },
+        {
+          name: "旭温泉あさひ荘",
+          address: "〒697-0427 島根県浜田市旭町木田９５４−３",
+          url: "http://asahionsen.net/selected/",
+          showable: true   
+        },
+        {
+          name: "美又温泉会館",
+          address: "697-0301 島根県浜田市金城町追原11番乙地",
+          url: "http://www.kankou-hamada.org/modules/guide/index.php?action=SpotView&spot_id=1043",
+          showable: true
+        },
+        {
+          name: "リフレパークきんたの里",
+          address: "697-0123 島根県浜田市金城町七条イ980番1",
+          url: "http://www.kankou-hamada.org/modules/guide/index.php?action=SpotView&spot_id=1157",
+          showable: true
+        }
+      ]
+
+      { onsen: onsen }
+    end
+
     def set_word(word:)
       { word: word }
     end
@@ -85,6 +98,7 @@ class MyApp < Ovto::App
   class MainComponent < Ovto::Component
     def render
         o 'div' do
+            o 'span', { oncreate: -> (e){ actions.set_onsen }}
             o Header
             o 'div.container' do
                 o 'h1.center-align', 'Hamada Onsen Map'
