@@ -34,6 +34,12 @@ class MyApp < Ovto::App
           address: "697-0123 島根県浜田市金城町七条イ980番1",
           url: "http://www.kankou-hamada.org/modules/guide/index.php?action=SpotView&spot_id=1157",
           showable: true
+        },
+        {
+          name: "かくれの里ゆかり",
+          address: "697-0427 島根県浜田市旭町木田１００６－１",
+          url: "https://hpdsp.jp/yukari/",
+          showable: true
         }
       ]
 
